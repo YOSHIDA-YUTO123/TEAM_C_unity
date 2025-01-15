@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovePow: 0.02
+  bulletPrefab: {fileID: 5719715299592950639, guid: 97768bc8851b39d478ce3db22ec8abbd, type: 3}
 --- !u!212 &42741591
 SpriteRenderer:
   m_ObjectHideFlags: 0

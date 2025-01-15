@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     public float MovePow = 0.1f;
+    public GameObject bulletPrefab;
     Rigidbody2D rigid2D;
 
     // Start is called before the first frame update
@@ -32,6 +33,11 @@ public class PlayerControl : MonoBehaviour
         else if (Input.GetKey(KeyCode.S))
         {
             transform.position += Vector3.up * -MovePow;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         }
     }
 }
