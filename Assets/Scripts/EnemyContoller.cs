@@ -25,7 +25,10 @@ public class EnemyContoller : MonoBehaviour
         // ˆÚ“®
         move();
 
-        //if(rb.transform.position.y < )
+        if (rb.transform.position.y < -6)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void move()
