@@ -270,6 +270,10 @@ PrefabInstance:
       propertyPath: ATK
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 3452319911802459139, guid: 4424dfcfca767ee47a70f847b787b4cd, type: 3}
+      propertyPath: BulletMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -6,10 +6,13 @@ public class PlayerControl : MonoBehaviour
 {
     public int HP = 100;
     public int ATK = 10;
+    public int BulletMode = 0;
     public float MovePow = 0.1f;
     public float LimitX = 8.5f;
     public float LimitY = 4.5f;
+    public float shotAngle = 15f; // ’e‚ªŠJ‚­Šp“x
     public GameObject bulletPrefab;
+    public GameObject bulletPrefab2;
     Rigidbody2D rigid2D;
 
     // Start is called before the first frame update
@@ -41,8 +44,22 @@ public class PlayerControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject Bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-            Bullet.GetComponent<BulletControl1>().Damege = GetBulletATK();
+            if(BulletMode == 0)
+            {
+                GameObject Bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+                Bullet.GetComponent<BulletControl1>().Damege = GetBulletATK();
+            }
+            else if (BulletMode == 1)
+            {
+                GameObject Bullet = Instantiate(bulletPrefab2, transform.position, transform.rotation * Quaternion.Euler(0, 0, shotAngle));
+                Bullet.GetComponent<BulletControl2>().Damege = GetBulletATK() / 2;
+
+                GameObject Bullet2 = Instantiate(bulletPrefab2, transform.position, transform.rotation * Quaternion.Euler(0, 0, -shotAngle));
+                Bullet2.GetComponent<BulletControl2>().Damege = GetBulletATK() / 2;
+
+                GameObject Bullet3 = Instantiate(bulletPrefab2, transform.position, Quaternion.identity);
+                Bullet3.GetComponent<BulletControl2>().Damege = GetBulletATK() / 2;
+            }
         }
 
         transform.position = new Vector2(
