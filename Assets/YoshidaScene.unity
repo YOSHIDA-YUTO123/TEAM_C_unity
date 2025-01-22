@@ -397,7 +397,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2414024814472961426, guid: 082928f5d2cdb0249aa845490ace6b7f, type: 3}
       propertyPath: m_Name
-      value: rock-1 (1)
+      value: rock-1
       objectReference: {fileID: 0}
     - target: {fileID: 6272732954433985030, guid: 082928f5d2cdb0249aa845490ace6b7f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -455,6 +455,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2414024814472961426, guid: 082928f5d2cdb0249aa845490ace6b7f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1639769864}
+    - targetCorrespondingSourceObject: {fileID: 2414024814472961426, guid: 082928f5d2cdb0249aa845490ace6b7f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1639769865}
   m_SourcePrefab: {fileID: 100100000, guid: 082928f5d2cdb0249aa845490ace6b7f, type: 3}
 --- !u!1001 &1321147324
 PrefabInstance:
@@ -616,6 +619,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyHP: 1
+--- !u!114 &1639769865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639769855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ac8944f3b0be449b92a39ade126148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rock: {fileID: 1639769855}
+  minTime: 2
+  maxTime: 5
+  xMinPosition: -10
+  xMaxPosition: 10
+  yMinPosition: 0
+  yMaxPosition: 10
 --- !u!1001 &2116726382
 PrefabInstance:
   m_ObjectHideFlags: 0
