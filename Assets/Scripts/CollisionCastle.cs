@@ -10,6 +10,7 @@ public class CollisionCastle : MonoBehaviour
 
     public GameObject effectPrefab;// エフェクトプレハブ用
 
+    public float fTimevalue = 2.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +40,7 @@ public class CollisionCastle : MonoBehaviour
                 GameObject effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
 
                 // エフェクトを4秒後に画面から消す
-                Destroy(effect, 4.0f);
+                Destroy(effect, fTimevalue);
             }
 
             if (CastleLife <= 0)
