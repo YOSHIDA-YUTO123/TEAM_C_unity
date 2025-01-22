@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 100
   ATK: 10
-  BulletMode: 0
+  BulletMode: 1
   MovePow: 0.06
   LimitX: 8.5
   LimitY: 4.5

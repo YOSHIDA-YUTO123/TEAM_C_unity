@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyGenerater : MonoBehaviour
 {
     //敵プレハブ
-    public GameObject rock;
+    public GameObject rock1;
     //時間間隔の最小値
     public float minTime = 2f;
     //時間間隔の最大値
@@ -40,7 +40,7 @@ public class EnemyGenerater : MonoBehaviour
         if (time > interval)
         {
             //enemyをインスタンス化する(生成する)
-            GameObject enemy = Instantiate(rock);
+            GameObject enemy = Instantiate(rock1);
 
             //生成した敵の位置をランダムに設定する
             enemy.transform.position = GetRandomPosition();
