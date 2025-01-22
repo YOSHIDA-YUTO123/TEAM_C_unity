@@ -17,10 +17,10 @@ public class RockController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, -fallSpeed, 0, Space.World);
+        transform.Translate(-fallSpeed, 0, 0, Space.World);
         transform.Rotate(0, 0, rotSpeed);
 
-        if (transform.position.y < -6.0f || transform.position.x > 9.0f || transform.position.x < -9.0f)
+        if (transform.position.x < -8.5f || transform.position.y > 9.0f || transform.position.y < -9.0f)
         {
             Destroy(gameObject);
         }
