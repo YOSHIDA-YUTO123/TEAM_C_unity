@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gamescene.unity
     guid: 1178e3c9048a2314d94bb584c07c1d09
+  - enabled: 1
+    path: Assets/Nishioscens.unity
+    guid: c5dbbdaf5bc3d78479aa4d010e557735
   m_configObjects: {}
