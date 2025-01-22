@@ -7,6 +7,8 @@ public class PlayerControl : MonoBehaviour
     public int HP = 100;
     public int ATK = 10;
     public float MovePow = 0.1f;
+    public float LimitX = 8.5f;
+    public float LimitY = 4.5f;
     public GameObject bulletPrefab;
     Rigidbody2D rigid2D;
 
@@ -42,6 +44,12 @@ public class PlayerControl : MonoBehaviour
             GameObject Bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             Bullet.GetComponent<BulletControl1>().Damege = GetBulletATK();
         }
+
+        transform.position = new Vector2(
+              //ƒGƒŠƒAŽw’è‚µ‚ÄˆÚ“®‚·‚é
+              Mathf.Clamp(transform.position.x, -LimitX, LimitX),
+              Mathf.Clamp(transform.position.y, -LimitY, LimitY)
+              );
     }
 
     public int GetBulletATK()
