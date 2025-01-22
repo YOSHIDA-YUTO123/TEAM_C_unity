@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CollisionBulletController : MonoBehaviour
 {
+    public int EnemyHP;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,15 @@ public class CollisionBulletController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bullet")) 
         {
-            gameObject.SetActive(false);
+            EnemyHP -= 1; // HP‚ð‚PŒ¸‚ç‚·
+
+            Destroy(other.gameObject);
+
+            if (EnemyHP == 0)
+            {
+                gameObject.SetActive(false);
+            }
         }
+
     }
 }
