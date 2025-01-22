@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class BulletControl1 : MonoBehaviour
 {
+    public PlayerControl playerControl;
     public float BulletSpeed = 0.1f;
-    public int Damege = 10;
+    public int Damege;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    public int HP = 100;
+    public int ATK = 10;
     public float MovePow = 0.1f;
     public GameObject bulletPrefab;
     Rigidbody2D rigid2D;
@@ -37,7 +39,13 @@ public class PlayerControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            GameObject Bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            Bullet.GetComponent<BulletControl1>().Damege = GetBulletATK();
         }
+    }
+
+    public int GetBulletATK()
+    {
+        return ATK;
     }
 }
