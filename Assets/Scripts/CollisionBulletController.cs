@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class CollisionBulletController : MonoBehaviour
 {
     public int EnemyHP;
+    int Damage;
 
     // Start is called before the first frame update
     void Start()
@@ -15,22 +17,26 @@ public class CollisionBulletController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
 
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Bullet")) 
+        if (other.gameObject.CompareTag("Bullet"))
         {
-            EnemyHP -= 1; // HP‚ð‚PŒ¸‚ç‚·
+            GameObject pl = GameObject.Find("Player");
 
+            PlayerControl playerControl = pl.GetComponent<PlayerControl>();
+            Damage = playerControl.GetBulletATK();
+
+            EnemyHP -= Damage; // HP‚ð‚PŒ¸‚ç‚·
+            
             Destroy(other.gameObject);
 
-            if (EnemyHP == 0)
+            if (EnemyHP <= 0)
             {
                 gameObject.SetActive(false);
             }
-        }
 
+        }
     }
 }
