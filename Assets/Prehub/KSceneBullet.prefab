@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4330260684198176973}
   - component: {fileID: 8516893698833084173}
   - component: {fileID: 2970433606973563594}
+  - component: {fileID: 2527559792712851484}
   m_Layer: 0
   m_Name: KSceneBullet
   m_TagString: Untagged
@@ -99,3 +100,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletSpeed: 0.1
   Damege: 10
+--- !u!50 &2527559792712851484
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2603936768137627947}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
