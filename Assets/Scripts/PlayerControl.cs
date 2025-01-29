@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    private int BulletPattern = 2;
     public int HP = 100;
     public int ATK = 10;
     public int BulletMode = 0;
@@ -44,12 +45,12 @@ public class PlayerControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(BulletMode == 0)
+            if(BulletMode % BulletPattern == 0)
             {
                 GameObject Bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
                 Bullet.GetComponent<BulletControl1>().Damege = GetBulletATK();
             }
-            else if (BulletMode == 1)
+            else if (BulletMode % BulletPattern == 1)
             {
                 GameObject Bullet = Instantiate(bulletPrefab2, transform.position, transform.rotation * Quaternion.Euler(0, 0, shotAngle));
                 Bullet.GetComponent<BulletControl2>().Damege = GetBulletATK() / 2;
