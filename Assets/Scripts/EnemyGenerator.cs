@@ -40,10 +40,10 @@ public class EnemyGenerater : MonoBehaviour
         if (time > interval)
         {
             //enemyをインスタンス化する(生成する)
-            GameObject enemy = Instantiate(rock1);
+            //GameObject enemy = Instantiate(rock1);
 
             //生成した敵の位置をランダムに設定する
-            enemy.transform.position = GetRandomPosition();
+            //enemy.transform.position = GetRandomPosition();
 
             //経過時間を初期化して再度時間計測を始める
             time = 0f;

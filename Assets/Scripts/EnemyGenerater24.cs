@@ -5,7 +5,9 @@ using UnityEngine;
 public class EnemyGenerater24 : MonoBehaviour
 {
     public GameObject enemyPrefab; // 敵のPrefab
-    public float spawnInterval = 2f; // 敵を出現させる間隔（秒）
+    public float BasespawnInterval = 2.0f; // 敵を出現させる間隔（秒）
+    public int nBaseHP = 30;
+    public int Level = 0;
     public Vector2 spawnAreaMin; // スポーンエリアの左下の座標
     public Vector2 spawnAreaMax; // スポーンエリアの右上の座標
 
@@ -13,7 +15,7 @@ public class EnemyGenerater24 : MonoBehaviour
 
     void Start()
     {
-        timer = spawnInterval; // タイマーを初期化
+        timer = BasespawnInterval - (Level * 0.1f); // タイマーを初期化
     }
 
     void Update()
@@ -23,7 +25,7 @@ public class EnemyGenerater24 : MonoBehaviour
         if (timer <= 0f)
         {
             SpawnEnemy();
-            timer = spawnInterval; // タイマーをリセット
+            timer = BasespawnInterval - (Level * 0.1f); // タイマーをリセット
         }
     }
 
@@ -36,6 +38,7 @@ public class EnemyGenerater24 : MonoBehaviour
 
         // 敵を生成
         Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        enemyPrefab.GetComponent<CollisionBulletController>().EnemyHP = nBaseHP + (Level * 10);
     }
 
     void OnDrawGizmosSelected()
