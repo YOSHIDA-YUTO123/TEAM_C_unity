@@ -194,6 +194,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyHP: 30
+  bulletPrefab: {fileID: 0}
+  SpeedItem: {fileID: 1074628079959438550, guid: 523c8d9f6f8ca1c46b70e700bc05a9ef, type: 3}
 --- !u!114 &-4742746427491943569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,7 +203,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2414024814472961426}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 675171fc2bd5bb143b3ec2ee35a7a4c8, type: 3}
   m_Name: 
@@ -213,7 +215,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2414024814472961426}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fe53602ad19e524faa681b8e6e88ddd, type: 3}
   m_Name: 
