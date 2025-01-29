@@ -1,31 +1,58 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // UIを使うときに必要
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField]
-    Text TimerText; // テキスト名
-    public float limitTime = 10; // 制限時間
+    [SerializeField] Text timerText; // 制限時間を表示するテキスト
+    [SerializeField] GameObject gameOverText; // ゲーム終了時に表示するテキスト
 
-    // Start is called before the first frame update
+    public float limitTime = 10.0f; // 制限時間
+
     void Start()
     {
-
+        // 初期状態でゲームオーバーテキストを非表示にする
+        if (gameOverText != null)
+        {// null じゃなかったら
+            gameOverText.SetActive(false);
+        }
+        else
+        {// デバッグログ
+            Debug.LogError("gameOverText が設定されていません。");
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        limitTime -= Time.deltaTime;// タイム減算
+        // 時間を減らす
+        limitTime -= Time.deltaTime;
 
-        if (limitTime < 0)
-        {// 0いかになった時
-            limitTime = 0;// 0にする
+        // 0以下になったら 0 に固定
+        if (limitTime <= 0)
+        {
+            limitTime = 0;
+
+            // GameOverのテキストを表示
+            if (gameOverText != null)
+            {
+                gameOverText.SetActive(true);
+            }
+
+            // マウスクリックでゲームシーンを再読み込み
+            if (Input.GetMouseButtonDown(0))
+            {
+                SceneManager.LoadScene("GameScene");
+            }
         }
 
-        TimerText.text = limitTime.ToString("F0"); // 残り時間を整数で表示
+        // 残り時間を整数で表示
+        if (timerText != null)
+        {
+            timerText.text = limitTime.ToString("F0");
+        }
+        else
+        {
+            Debug.LogError("timerText が設定されていません。");
+        }
     }
 }
-
