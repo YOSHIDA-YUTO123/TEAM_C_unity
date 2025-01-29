@@ -20,7 +20,7 @@ public class RockController : MonoBehaviour
         transform.Translate(0, -fallSpeed, 0, Space.World);
         transform.Rotate(0, 0, rotSpeed);
 
-        if (transform.position.x < -8.5f || transform.position.y > 9.0f || transform.position.y < -9.0f)
+        if (transform.position.x < -9.5f || transform.position.y > 5.0f || transform.position.y < -5.0f)
         {
             Destroy(gameObject);
         }

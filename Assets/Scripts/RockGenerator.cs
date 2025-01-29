@@ -15,7 +15,7 @@ public class RockGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Instantiate(rockPrefab, new Vector3(8.5f, 2000.0f * Random.value, 0.0f), Quaternion.identity);
-        Instantiate(rockPrefab, new Vector3(8.5f, -2000.0f * Random.value, 0.0f), Quaternion.identity);
+        Instantiate(rockPrefab, new Vector3(8.5f, 2500.0f * Random.value, 0.0f), Quaternion.identity);
+        Instantiate(rockPrefab, new Vector3(8.5f, -2500.0f * Random.value, 0.0f), Quaternion.identity);
     }
 }
