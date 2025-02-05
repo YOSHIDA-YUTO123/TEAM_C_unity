@@ -15,6 +15,8 @@ public class PlayerControl : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject bulletPrefab2;
     Rigidbody2D rigid2D;
+    public int nDamage = 100;
+
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +70,23 @@ public class PlayerControl : MonoBehaviour
               Mathf.Clamp(transform.position.x, -LimitX, LimitX),
               Mathf.Clamp(transform.position.y, -LimitY, LimitY)
               );
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // ìGÇ∆ÇÃè’ìÀ
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            // ëÃóÕÇå∏ÇÁÇ∑
+            HP -= nDamage;
+
+            if (HP <= 0)
+            {// ëÃóÕÇ™0à»â∫
+                // èÈÇ»Ç≠Ç»ÇÈ
+                gameObject.SetActive(false);
+            }
+
+        }
     }
 
     public int GetBulletATK()
