@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -17,17 +18,26 @@ public class PlayerControl : MonoBehaviour
     Rigidbody2D rigid2D;
     public int nDamage = 100;
 
+    public SceneSelectEX sceneSelector;
+
+    // **ゲーム進行フラグ**
+    private bool isGameOver = false; // プレイヤーが死亡するとtrueになる
 
     // Start is called before the first frame update
     void Start()
     {
+
         Application.targetFrameRate = 150;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.A))
+
+        // **プレイヤーが死亡している場合、更新処理を停止**
+        if (isGameOver) return;
+
+        if (Input.GetKey(KeyCode.A))
         {
             transform.position += Vector3.right * -MovePow;
         }
@@ -82,8 +92,21 @@ public class PlayerControl : MonoBehaviour
 
             if (HP <= 0)
             {// 体力が0以下
-                // 城なくなる
+                // プレイヤーなくなる
                 gameObject.SetActive(false);
+
+                // **ゲームオーバーフラグを立てる**
+                isGameOver = true;
+
+                // 死亡判定
+                sceneSelector.OnPlayerDeath();
+
+                if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return))
+                {// ゲームシーンを読み込む
+                    SceneManager.LoadScene("GameScene");
+                }
+
+
             }
 
         }
