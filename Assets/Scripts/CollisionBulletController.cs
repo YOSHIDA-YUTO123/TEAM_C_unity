@@ -7,9 +7,9 @@ public class CollisionBulletController : MonoBehaviour
 {
     public int EnemyHP;
     int Damage;
-    int Random;
     //public GameObject bulletPrefab;
     public GameObject SpeedItem;
+    public GameObject AttackItem;
 
     // Start is called before the first frame update
     void Start()
@@ -37,10 +37,18 @@ public class CollisionBulletController : MonoBehaviour
 
             if (EnemyHP <= 0)
             {
+                int rand = UnityEngine.Random.Range(1, 6);
                 gameObject.SetActive(false);
                 Destroy(gameObject);
 
-                GameObject Item = Instantiate(SpeedItem, transform.position, Quaternion.identity);
+                if(rand == 1)
+                {
+                    GameObject Item = Instantiate(SpeedItem, transform.position, Quaternion.identity);
+                }
+                else if(rand == 2)
+                {
+                    GameObject Item2 = Instantiate(AttackItem, transform.position, Quaternion.identity);
+                }
             }
 
         }

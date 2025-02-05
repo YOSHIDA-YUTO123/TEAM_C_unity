@@ -6,6 +6,7 @@ public class SpeedUPItem : MonoBehaviour
 {
 
     public float SpeedUPAdd = 0.02f;
+    public float SpeedLimit = 0.3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,10 @@ public class SpeedUPItem : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.GetComponent<PlayerControl>().MovePow += SpeedUPAdd;
+            if(other.GetComponent<PlayerControl>().MovePow >= SpeedLimit)
+            {
+                other.GetComponent<PlayerControl>().MovePow = SpeedLimit;
+            }
             Destroy(gameObject);
         }
     }

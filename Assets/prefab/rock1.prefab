@@ -194,8 +194,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyHP: 30
-  bulletPrefab: {fileID: 0}
   SpeedItem: {fileID: 1074628079959438550, guid: 523c8d9f6f8ca1c46b70e700bc05a9ef, type: 3}
+  AttackItem: {fileID: 1074628079959438550, guid: c1237b3d3c45409419f3e92f065f5ecf, type: 3}
 --- !u!114 &-4742746427491943569
 MonoBehaviour:
   m_ObjectHideFlags: 0
