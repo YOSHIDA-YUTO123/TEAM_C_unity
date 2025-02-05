@@ -961,7 +961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5453342574547384423, guid: 1bdb6bfc2fbe35447aa03ad95eb83d7d, type: 3}
       propertyPath: CastleLife
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5819743346031531749, guid: 1bdb6bfc2fbe35447aa03ad95eb83d7d, type: 3}
       propertyPath: m_Name
