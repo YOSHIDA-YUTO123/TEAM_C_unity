@@ -41,16 +41,14 @@ public class CollisionBulletController : MonoBehaviour
 
             if (EnemyHP <= 0)
             {
-<<<<<<< HEAD
                 int rand = UnityEngine.Random.Range(1, 6);
-=======
+
                 // エフェクト
                 GameObject effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
 
                 // エフェクトを2秒後に画面から消す
                 Destroy(effect, fTimevalue);
 
->>>>>>> 6724275daf2a072b803dac492729ec10510e52c5
                 gameObject.SetActive(false);
                 Destroy(gameObject);
 
