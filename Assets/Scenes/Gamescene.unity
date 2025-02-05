@@ -244,7 +244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8690330700949863783, guid: f3f7847a93984ab46bcaf549e2dcb971, type: 3}
       propertyPath: Level
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8690330700949863783, guid: f3f7847a93984ab46bcaf549e2dcb971, type: 3}
       propertyPath: spawnInterval
@@ -359,6 +359,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &837520352 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1297282572951524028, guid: f3f7847a93984ab46bcaf549e2dcb971, type: 3}
+  m_PrefabInstance: {fileID: 377519017}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &941975164
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 941975166}
   gameOverText: {fileID: 1517066644}
+  EnemyGenerat: {fileID: 837520352}
   limitTime: 100
 --- !u!114 &1923847424
 MonoBehaviour:

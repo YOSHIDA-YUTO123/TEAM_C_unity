@@ -6,6 +6,7 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] Text timerText; // 制限時間を表示するテキスト
     [SerializeField] GameObject gameOverText; // ゲーム終了時に表示するテキスト
+    [SerializeField] GameObject EnemyGenerat;
 
     public float limitTime = 10.0f; // 制限時間
 
@@ -26,6 +27,8 @@ public class Timer : MonoBehaviour
     {
         // 時間を減らす
         limitTime -= Time.deltaTime;
+
+        EnemyGenerat.GetComponent<EnemyGenerater24>().AddLevel = (int)(10 - limitTime / 10);
 
         // 0以下になったら 0 に固定
         if (limitTime <= 0)

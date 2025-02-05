@@ -6,6 +6,7 @@ public class AtkUPItem : MonoBehaviour
 {
 
     public int AtkUPAdd = 5;
+    public int AtkLimit = 30;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,10 @@ public class AtkUPItem : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.GetComponent<PlayerControl>().ATK += AtkUPAdd;
+            if (other.GetComponent<PlayerControl>().MovePow >= AtkLimit)
+            {
+                other.GetComponent<PlayerControl>().MovePow = AtkLimit;
+            }
             Destroy(gameObject);
         }
     }

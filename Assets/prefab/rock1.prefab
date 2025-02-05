@@ -193,10 +193,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7863ba5ee7172849ad1368fd4e64756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   EnemyHP: 30
   SpeedItem: {fileID: 1074628079959438550, guid: 523c8d9f6f8ca1c46b70e700bc05a9ef, type: 3}
-  effectPrefab: {fileID: 119183615461286708, guid: 141e1779869c79845bd243610f187f47, type: 3}
+  AttackItem: {fileID: 1074628079959438550, guid: c1237b3d3c45409419f3e92f065f5ecf, type: 3}
+=======
+  EnemyHP: 50
+  SpeedItem: {fileID: 1074628079959438550, guid: 523c8d9f6f8ca1c46b70e700bc05a9ef, type: 3}
+  effectPrefab: {fileID: 5339739117810204693, guid: 26e1cb216e3635e4a820f58a1118d6b9, type: 3}
   fTimevalue: 2
+>>>>>>> 6724275daf2a072b803dac492729ec10510e52c5
 --- !u!114 &-4742746427491943569
 MonoBehaviour:
   m_ObjectHideFlags: 0

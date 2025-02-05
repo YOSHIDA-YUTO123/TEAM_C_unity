@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8509030589544584904}
   - component: {fileID: 5211081296423134668}
-  - component: {fileID: 2817916499275008157}
   - component: {fileID: 737355229629222370}
   - component: {fileID: 5347111312117220243}
+  - component: {fileID: -2677712748160095759}
   m_Layer: 0
-  m_Name: SpeedUPItem
+  m_Name: AtkUPItem
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 553285369cf6a8f47a7c76aef5b7443b, type: 2}
+  - {fileID: 2100000, guid: ac7b979d974c08e4e943716202d1b6d1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -87,20 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2817916499275008157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1074628079959438550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be0659510d1c7e438391af0f88240ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpeedUPAdd: 0.02
-  SpeedLimit: 0.2
 --- !u!70 &737355229629222370
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -148,3 +134,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 675171fc2bd5bb143b3ec2ee35a7a4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2677712748160095759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074628079959438550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d5de917c0b1af46bfc1acfce420870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AtkUPAdd: 3
