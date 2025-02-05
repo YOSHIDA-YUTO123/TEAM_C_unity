@@ -14,7 +14,7 @@ public class sceneManagerEX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return))
         {// ƒQ[ƒ€ƒV[ƒ“‚ğ“Ç‚İ‚Ş
             SceneManager.LoadScene("GameScene");
         }
