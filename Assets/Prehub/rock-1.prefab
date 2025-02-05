@@ -123,7 +123,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 1.5
 --- !u!114 &2571397250532569666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +151,8 @@ MonoBehaviour:
   EnemyHP: 10
   SpeedItem: {fileID: 1074628079959438550, guid: 523c8d9f6f8ca1c46b70e700bc05a9ef, type: 3}
   AttackItem: {fileID: 1074628079959438550, guid: c1237b3d3c45409419f3e92f065f5ecf, type: 3}
+  effectPrefab: {fileID: 0}
+  fTimevalue: 2
 --- !u!61 &-481583303967767759
 BoxCollider2D:
   m_ObjectHideFlags: 0

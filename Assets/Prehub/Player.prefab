@@ -108,6 +108,7 @@ MonoBehaviour:
   shotAngle: 15
   bulletPrefab: {fileID: 5719715299592950639, guid: 97768bc8851b39d478ce3db22ec8abbd, type: 3}
   bulletPrefab2: {fileID: 5856562145874823320, guid: 61a187c10a8f66c4e8585a8a7f57b3d7, type: 3}
+  nDamage: 5
 --- !u!61 &3391978843465649778
 BoxCollider2D:
   m_ObjectHideFlags: 0
